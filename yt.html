@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>YouTube Channel</title>        <meta name="description" content="">
+        <meta name="keywords" content="">
+      
+        <!-- Favicons -->
+        <link href="assets/img/favicon.png" rel="icon">
+        <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+      
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect">
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+      
+        <!-- Vendor CSS Files -->
+        <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+      
+        <!-- Main CSS File -->
+        <link href="assets/css/main.css" rel="stylesheet">
+        <link href="assets/main-2.css" rel="stylesheet">
+      
+      
+        <!--Icons links-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      
+        <!--Chart links-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+       
+      
+        
+      
+      
+      
+        <!-- =======================================================
+        * Template Name: Mentor
+        * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+        * Updated: Aug 07 2024 with Bootstrap v5.3.3
+        * Author: BootstrapMade.com
+        * License: https://bootstrapmade.com/license/
+        ======================================================== -->
+      
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .youtube-button {
+            display: inline-block;
+            background-color: #FF0000;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            margin: 10px;
+        }
+
+        .youtube-button:hover {
+            background-color: #cc0000;
+        }
+
+        .video-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .video-gallery iframe {
+            width: 320px;
+            height: 180px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        #loadMore {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #7d4926;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #loadMore:hover {
+            background-color: #7d4926;
+        }
+    </style>
+</head>
+<body class="index-page">
+      <div class="client-container">
+        <img class="client-header-banner" alt="ihm banner" src="assets/img/ihmbanner.jpeg" />
+    </div>
+
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <!-- <a href="ihm-index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/ihmlogo-2-min.png" alt="">
+      </a> -->
+
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+
+          <!-- <li><a href="ihm-index.html" class="active">Home<br></a></li> -->
+                         <li><a href="ihm-index.html">Home</a></li>
+
+          <li class="dropdown"><a href="about.html"><span>About Us</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="about.html">The Institute</a></li>
+              <li><a href="Principal's-Profile.html">Principal's Profile</a></li>
+
+              <li><a href="principal's-message.html">Principal's Message</a></li>
+              <li><a href="trainers.html">Faculty Members</a></li>
+              <li><a href="Our_Partners.html">Our Partners</a></li>
+              <li><a href="About-NCHMCT.html">About NCHMCT</a></li>
+              <li><a href="Awards.html">Our Awards</a></li>
+              <li><a href="Ihm-Gallery.html">Life at Ranchi</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="bsc-in-hospitality-hotel-administration.html">B.SC. in Hospitality &amp; Hotel
+                  Administration</a></li>
+              <li><a href="diploma-in-front-office.html">Diploma in Front Office</a></li>
+              <li><a href="diploma-in-house-keeping.html">Diploma in House Keeping</a></li>
+              <li><a href="Food-Production-Patisserie.html">Craftsmanship Certificate Course in Food Production &amp;
+                  Patisserie</a></li>
+              <li><a href="Food-Beverage-Service.html">Craftsmanship Certificate Course in Food &amp; Beverage
+                  Service</a></li>
+              <li><a href="IITFC.html">IITFC</a></li>
+              <li><a href="#">Hunar Se Rozgar Tak (HSRT)</a></li>
+              <li><a href="Syllabus.html">Syllabus</a></li>
+
+
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Statutory Compliances</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>RTI</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="assets/pdf/by law.pdf">By Laws</a></li>
+                  <li><a href="assets/pdf/Recruitment and promotion.pdf">Recruitment Rules</a></li>
+                  <li><a href="assets/pdf/Name, Desginations and other Particulars of PIOs.pdf">Name, Desginations and
+                      other Particulars of PIOs</a></li>
+                  <li><a href="assets/pdf/Staff regulations.pdf">Staff Regulations</a></li>
+                  <li><a href="assets/pdf/rules and regulation.pdf">Rules and Regulations</a></li>
+                  <li><a href="assets/pdf/Appellate Authority.pdf">Appellate Authority</a></li>
+                  <li><a href="assets/pdf/Statement of Board.pdf">Statement of Board</a></li>
+                  <li><a href="assets/pdf/RTI application format.pdf">Download RTI application FOrm</a></li>
+
+
+
+                </ul>
+              </li>
+              <li><a href="assets/pdf/List of Anti Ragging committee.pdf">Anti Ragging</a></li>
+              <li><a href="assets/pdf/women-harassment.pdf">Women Harassment</a></li>
+
+
+
+            </ul>
+          </li>
+          <!-- <li><a href="trainers.html">Statutory Compliances</a></li> -->
+          <li class="dropdown"><a href="#"><span>Student Corner</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+
+
+              <li class="dropdown"><a href="#"><span>Rule Book</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="General-rules.html">General Rules</a></li>
+                  <li><a href="Attendance-Rules.html">Attendance Rules</a></li>
+                  <li><a href="Hostel_rules.html">Hostel Rules</a></li>
+                  <li><a href="Exam-rules.html"></a></li>
+
+
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Alumni</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="assets/pdf/alumni.pdf">Institute Form</a></li>
+                  <li><a href="https://www.almashines.com/nchmct">NCHM Online</a></li>
+
+                </ul>
+              </li>
+
+              <li><a href="anti-ragging.html">Anti Ragging</a></li>
+              <li><a href="Placement.html">Placements</a></li>
+              <li><a href="registration.html">Online Admission</a></li>
+              <li><a href="Forms_Format.html">Forms & Format</a></li>
+              <li><a href="#">IGNOU Assignment</a></li>
+              <li><a href="Results.html">Results</a></li>
+
+
+
+
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Online Fee Payment</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="https://paydirect.eduqfix.com/app/uKr2VXr8Bcs79UTUTuFtP+eYK+jE8e12k88R0pgG/3036/6510">2nd
+                  Semester</a></li>
+              <li><a href="https://erp.eshiksa.net/esh/index.php?plugin=Login&action=index">4th & 6th Semester</a></li>
+            </ul>
+          </li>
+          <li><a href="Notice-board.html"><span>Notice</span> </a>
+            <!-- <ul>
+              <li><a href="#">Notice Board</a></li>
+           
+              <li><a href="#">Exam Cell</a></li>
+              <li><a href="#">Results</a></li>
+              <li><a href="#">Tender Notices</a></li>
+              <li><a href="#">Staff Notices</a></li>
+
+            </ul> -->
+
+          </li>
+          <!-- <li><a href="contact.html">Contact</a></li> -->
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="contact.html">Contact Us</a>
+
+    </div>
+  </header>
+
+    <h2>Follow My YouTube Channel</h2>
+
+    <!-- YouTube Clickable Button -->
+    <a href="https://www.youtube.com/channel/UCSfL_NWDQ7gVmR2AJgiVeGg" target="_blank" class="youtube-button">
+        Visit My YouTube Channel
+    </a>
+
+    <!-- YouTube Embed (Channel) -->
+    <!-- <div>
+        <iframe width="100%" height="400" src="https://www.youtube.com/@IHMRanchi/videos" allowfullscreen></iframe>
+    </div> -->
+
+    <!-- Video Gallery -->
+    <h2>Watch Our Latest Videos</h2>
+    <div class="video-gallery" id="videoGallery"></div>
+
+    <!-- Load More Button -->
+    <button id="loadMore">Load More</button>
+
+    <script>
+        const apiKey = 'AIzaSyAS54yM9AqvpMPj7Vl_MeDHPEZWmMhr88A'; // Replace this with your new YouTube API key
+        const channelId = 'UCSfL_NWDQ7gVmR2AJgiVeGg';
+        const maxResults = 6; // Number of videos to load each time
+        let nextPageToken = '';
+
+        async function fetchVideos(loadMore = false) {
+            let url = `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&type=video&maxResults=${maxResults}`;
+            if (loadMore && nextPageToken) {
+                url += `&pageToken=${nextPageToken}`;
+            }
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (data.error) {
+                    console.error("YouTube API Error:", data.error.message);
+                    return;
+                }
+
+                nextPageToken = data.nextPageToken || '';
+
+                const videoGallery = document.getElementById('videoGallery');
+                data.items.forEach(video => {
+                    const videoId = video.id.videoId;
+                    const videoFrame = document.createElement('iframe');
+                    videoFrame.src = `https://www.youtube.com/embed/${videoId}`;
+                    videoFrame.allowFullscreen = true;
+                    videoGallery.appendChild(videoFrame);
+                });
+
+                if (!nextPageToken) {
+                    document.getElementById('loadMore').style.display = 'none';
+                }
+            } catch (error) {
+                console.error("Error fetching videos:", error);
+            }
+        }
+
+        document.getElementById('loadMore').addEventListener('click', () => fetchVideos(true));
+
+        // Load first batch of videos on page load
+        fetchVideos();
+    </script>
+
+
+
+</body>
+</html>

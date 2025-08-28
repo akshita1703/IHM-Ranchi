@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Notice Page</title>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet">
+  
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/main-2.css" rel="stylesheet">
+  
+  
+    <!--Icons links-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <style>
+  
+
+  
+    /* Filters Button Styles */
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .filters .btn-custom {
+      padding: 10px 15px;
+      border: none;
+      background: #7d4926;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .filters .btn-custom:hover {
+      background: #a6733d;
+    }
+
+    .filters .btn-custom.active {
+      background: #8d6315;
+      color: #ffffff;
+    }
+
+    /* Notice Item Styles */
+    .notices {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .notice-item {
+      display: none; /* Hidden by default */
+      padding: 15px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .notice-item h4 {
+      margin: 0;
+      color: #494949;
+      font-size: 16px;
+    }
+
+    .notice-item p {
+      margin: 0;
+      color: #666;
+    }
+
+    .notice-item a {
+      padding: 8px 12px;
+      background: #c49a6c;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .notice-item a:hover {
+      background: #7d4926;
+    }
+  </style>
+</head>
+<body class="index-page">
+
+    <div class="client-container">
+        <img class="client-header-banner" alt="ihm banner" src="assets/img/ihmbanner.jpeg" />
+    </div>
+
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <!-- <a href="ihm-index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/ihmlogo-2-min.png" alt="">
+      </a> -->
+
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+
+          <!-- <li><a href="ihm-index.html" class="active">Home<br></a></li> -->
+                         <li><a href="ihm-index.html">Home</a></li>
+
+          <li class="dropdown"><a href="about.html"><span>About Us</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="about.html">The Institute</a></li>
+              <li><a href="Principal's-Profile.html">Principal's Profile</a></li>
+
+              <li><a href="principal's-message.html">Principal's Message</a></li>
+              <li><a href="trainers.html">Faculty Members</a></li>
+              <li><a href="Our_Partners.html">Our Partners</a></li>
+              <li><a href="About-NCHMCT.html">About NCHMCT</a></li>
+              <li><a href="Awards.html">Our Awards</a></li>
+              <li><a href="Ihm-Gallery.html">Life at Ranchi</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="bsc-in-hospitality-hotel-administration.html">B.SC. in Hospitality &amp; Hotel
+                  Administration</a></li>
+              <li><a href="diploma-in-front-office.html">Diploma in Front Office</a></li>
+              <li><a href="diploma-in-house-keeping.html">Diploma in House Keeping</a></li>
+              <li><a href="Food-Production-Patisserie.html">Craftsmanship Certificate Course in Food Production &amp;
+                  Patisserie</a></li>
+              <li><a href="Food-Beverage-Service.html">Craftsmanship Certificate Course in Food &amp; Beverage
+                  Service</a></li>
+              <li><a href="IITFC.html">IITFC</a></li>
+              <li><a href="#">Hunar Se Rozgar Tak (HSRT)</a></li>
+              <li><a href="Syllabus.html">Syllabus</a></li>
+
+
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Statutory Compliances</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>RTI</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="assets/pdf/by law.pdf">By Laws</a></li>
+                  <li><a href="assets/pdf/Recruitment and promotion.pdf">Recruitment Rules</a></li>
+                  <li><a href="assets/pdf/Name, Desginations and other Particulars of PIOs.pdf">Name, Desginations and
+                      other Particulars of PIOs</a></li>
+                  <li><a href="assets/pdf/Staff regulations.pdf">Staff Regulations</a></li>
+                  <li><a href="assets/pdf/rules and regulation.pdf">Rules and Regulations</a></li>
+                  <li><a href="assets/pdf/Appellate Authority.pdf">Appellate Authority</a></li>
+                  <li><a href="assets/pdf/Statement of Board.pdf">Statement of Board</a></li>
+                  <li><a href="assets/pdf/RTI application format.pdf">Download RTI application FOrm</a></li>
+
+
+
+                </ul>
+              </li>
+              <li><a href="assets/pdf/List of Anti Ragging committee.pdf">Anti Ragging</a></li>
+              <li><a href="assets/pdf/women-harassment.pdf">Women Harassment</a></li>
+
+
+
+            </ul>
+          </li>
+          <!-- <li><a href="trainers.html">Statutory Compliances</a></li> -->
+          <li class="dropdown"><a href="#"><span>Student Corner</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+
+
+              <li class="dropdown"><a href="#"><span>Rule Book</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="General-rules.html">General Rules</a></li>
+                  <li><a href="Attendance-Rules.html">Attendance Rules</a></li>
+                  <li><a href="Hostel_rules.html">Hostel Rules</a></li>
+                  <li><a href="Exam-rules.html"></a></li>
+
+
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Alumni</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="assets/pdf/alumni.pdf">Institute Form</a></li>
+                  <li><a href="https://www.almashines.com/nchmct">NCHM Online</a></li>
+
+                </ul>
+              </li>
+
+              <li><a href="anti-ragging.html">Anti Ragging</a></li>
+              <li><a href="Placement.html">Placements</a></li>
+              <li><a href="registration.html">Online Admission</a></li>
+              <li><a href="Forms_Format.html">Forms & Format</a></li>
+              <li><a href="#">IGNOU Assignment</a></li>
+              <li><a href="Results.html">Results</a></li>
+
+
+
+
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Online Fee Payment</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="https://paydirect.eduqfix.com/app/uKr2VXr8Bcs79UTUTuFtP+eYK+jE8e12k88R0pgG/3036/6510">2nd
+                  Semester</a></li>
+              <li><a href="https://erp.eshiksa.net/esh/index.php?plugin=Login&action=index">4th & 6th Semester</a></li>
+            </ul>
+          </li>
+          <li><a href="Notice-board.html"><span>Notice</span> </a>
+            <!-- <ul>
+              <li><a href="#">Notice Board</a></li>
+           
+              <li><a href="#">Exam Cell</a></li>
+              <li><a href="#">Results</a></li>
+              <li><a href="#">Tender Notices</a></li>
+              <li><a href="#">Staff Notices</a></li>
+
+            </ul> -->
+
+          </li>
+          <!-- <li><a href="contact.html">Contact</a></li> -->
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="contact.html">Contact Us</a>
+
+    </div>
+  </header>
+
+    
+   
+  <!-- Filter Buttons -->
+   
+  <div class="filters">
+    <button class="btn-custom active" onclick="filterSelection('all')">All Notice</button>
+<button class="btn-custom" onclick="filterSelection('tender')">Tender Notices</button>
+<button class="btn-custom" onclick="filterSelection('exam')">Exam Cell</button>
+<button class="btn-custom" onclick="filterSelection('results')">Results</button>
+<button class="btn-custom" onclick="filterSelection('ragging')">Anti-Ragging</button>
+<button class="btn-custom" onclick="filterSelection('admission')">Admission</button>
+<button class="btn-custom" onclick="filterSelection('hsr')">HSR</button>
+<button class="btn-custom" onclick="filterSelection('skill')">Skill Testing and Certification</button>
+<button class="btn-custom" onclick="filterSelection('destination')">Destination Based Skill</button>
+
+    
+  </div>
+
+  <!-- Notices Section -->
+  <div class="notices">
+    <div class="notice-item gallery-item notice">
+      <div>
+        <h4>Adventure Tour for Final Year Students</h4>
+        <p>Date: 2022-07-25</p>
+      </div>
+      <a href="#">Download</a>
+    </div>
+    <div class="notice-item gallery-item tender">
+      <div>
+        <h4>Office Closed Due to By-election 2022</h4>
+        <p>Date: 2022-06-22</p>
+      </div>
+      <a href="#">Download</a>
+    </div>
+    <div class="notice-item gallery-item exam">
+      <div>
+        <h4>Exam Schedule for Semester 2022</h4>
+        <p>Date: 2022-08-15</p>
+      </div>
+      <a href="#">Download</a>
+    </div>
+
+    <!--STaff Notice-->
+    <div class="notice-item gallery-item staff">
+        <div>
+          <h4>Adventure Tour for Final Year Students</h4>
+          <p>Date: 2022-07-25</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      <div class="notice-item gallery-item staff">
+        <div>
+          <h4>Office Closed Due to By-election 2022</h4>
+          <p>Date: 2022-06-22</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      <div class="notice-item gallery-item staff">
+        <div>
+          <h4>Office Closed</h4>
+          <p>Date: 2022-06-06</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      <div class="notice-item gallery-item staff">
+        <div>
+          <h4>Notice for Inventory 2021</h4>
+          <p>Date: 2021-07-07</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      
+
+      <!--Results Notice-->
+      <div class="notice-item gallery-item results">
+        <div>
+          <h4>B.Sc H&HA, Sem-2, 2022-23, TEE result</h4>
+          <p>Date: 2023-07-28</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      <div class="notice-item gallery-item results">
+        <div>
+          <h4>B.Sc Sem-4, 2022-23 result</h4>
+          <p>Date: 2023-07-03</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      <div class="notice-item gallery-item results">
+        <div>
+          <h4>B.Sc H&HA, Sem-5, supplementary result, Batch 2020-23</h4>
+          <p>Date: 2023-06-23</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      <div class="notice-item gallery-item results">
+        <div>
+          <h4>B.Sc H&HA, Sem-1, 2022-25</h4>
+          <p>Date: 2023-02-24</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      <div class="notice-item gallery-item results">
+        <div>
+          <h4>B.Sc H&HA, Sem-1, 2021-24</h4>
+          <p>Date: 2023-02-03</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      <div class="notice-item gallery-item results">
+        <div>
+          <h4>B.Sc H&HA, Sem-3 (IT Batch), 2021-24</h4>
+          <p>Date: 2023-01-20</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      <div class="notice-item gallery-item results">
+        <div>
+          <h4>B.Sc Sem-5 (Regular & Reappear) result</h4>
+          <p>Date: 2023-01-19</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      <div class="notice-item gallery-item results">
+        <div>
+          <h4>B.Sc H&HA, Sem-3, 2021-24</h4>
+          <p>Date: 2022-12-01</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      <div class="notice-item gallery-item results">
+        <div>
+          <h4>B.Sc H&HA, Sem-2, 2021-24</h4>
+          <p>Date: 2022-11-03</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      <div class="notice-item gallery-item results">
+        <div>
+          <h4>Regular result of B.Sc H&HA, Sem-5, 2019-22</h4>
+          <p>Date: 2022-05-23</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      <div class="notice-item gallery-item results">
+        <div>
+          <h4>Regular result of B.Sc H&HA, Sem-6, 2019-22</h4>
+          <p>Date: 2022-05-23</p>
+        </div>
+        <a href="#">Download</a>
+      </div>
+      
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    filterSelection('all'); // Show all items on page load
+
+    function filterSelection(category) {
+      const items = document.getElementsByClassName('gallery-item');
+      for (let i = 0; i < items.length; i++) {
+        items[i].classList.add('hide');
+        if (category === 'all' || items[i].classList.contains(category)) {
+          items[i].classList.remove('hide');
+          items[i].style.display = 'flex'; // Show matching items
+        } else {
+          items[i].style.display = 'none'; // Hide non-matching items
+        }
+      }
+    }
+
+    // Add event listener to filter buttons
+    document.querySelector('.filters').addEventListener('click', function (e) {
+      if (e.target.tagName === 'BUTTON') {
+        const buttons = document.querySelectorAll('.filters .btn-custom');
+        buttons.forEach((btn) => btn.classList.remove('active'));
+        e.target.classList.add('active');
+      }
+    });
+  </script>
+
+  <!-- Bootstrap Script Includes -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

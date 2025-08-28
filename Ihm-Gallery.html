@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IHM Gallery</title>
+     <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/main-2.css" rel="stylesheet">
+
+
+  <!--Icons links-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!--Chart links-->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .gallery-item img:hover {
+            transform: scale(1.05);
+        }
+      
+
+
+        .filters .btn-custom {
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #c49a6c;
+            color: white;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .filters .btn-custom:hover {
+            background-color: #5b341c;
+            color: white;
+        }
+
+        .filters .btn-custom.active {
+            background-color: #7d4926;
+            color: white;
+        }
+
+        .section-heading {
+            padding: 20px;
+            color: rgb(68, 68, 68);
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -5px;
+        }
+
+      
+
+        .gallery-item.hide {
+            display: none;
+        }
+
+        @media (min-width: 576px) {
+            .gallery-item {
+                flex: 0 0 calc(33.3% - 10px);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .gallery-item {
+                flex: 0 0 calc(33.333% - 10px);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .gallery-item {
+                flex: 0 0 calc(40% - 10px);
+            }
+        }
+
+        /* Make filter buttons vertical on mobile devices */
+        @media (max-width: 575px) {
+            .filters {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filters .btn-custom {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="index-page">
+
+   <div class="client-container">
+        <img class="client-header-banner" alt="ihm banner" src="assets/img/ihmbanner.jpeg" />
+    </div>
+
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <!-- <a href="ihm-index.html" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/ihmlogo-2-min.png" alt="">
+      </a> -->
+
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+
+          <!-- <li><a href="ihm-index.html" class="active">Home<br></a></li> -->
+                         <li><a href="ihm-index.html">Home</a></li>
+
+          <li class="dropdown"><a href="about.html"><span>About Us</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="about.html">The Institute</a></li>
+              <li><a href="Principal's-Profile.html">Principal's Profile</a></li>
+
+              <li><a href="principal's-message.html">Principal's Message</a></li>
+              <li><a href="trainers.html">Faculty Members</a></li>
+              <li><a href="Our_Partners.html">Our Partners</a></li>
+              <li><a href="About-NCHMCT.html">About NCHMCT</a></li>
+              <li><a href="Awards.html">Our Awards</a></li>
+              <li><a href="Ihm-Gallery.html">Life at Ranchi</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Courses</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="bsc-in-hospitality-hotel-administration.html">B.SC. in Hospitality &amp; Hotel
+                  Administration</a></li>
+              <li><a href="diploma-in-front-office.html">Diploma in Front Office</a></li>
+              <li><a href="diploma-in-house-keeping.html">Diploma in House Keeping</a></li>
+              <li><a href="Food-Production-Patisserie.html">Craftsmanship Certificate Course in Food Production &amp;
+                  Patisserie</a></li>
+              <li><a href="Food-Beverage-Service.html">Craftsmanship Certificate Course in Food &amp; Beverage
+                  Service</a></li>
+              <li><a href="IITFC.html">IITFC</a></li>
+              <li><a href="#">Hunar Se Rozgar Tak (HSRT)</a></li>
+              <li><a href="Syllabus.html">Syllabus</a></li>
+
+
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Statutory Compliances</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>RTI</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="assets/pdf/by law.pdf">By Laws</a></li>
+                  <li><a href="assets/pdf/Recruitment and promotion.pdf">Recruitment Rules</a></li>
+                  <li><a href="assets/pdf/Name, Desginations and other Particulars of PIOs.pdf">Name, Desginations and
+                      other Particulars of PIOs</a></li>
+                  <li><a href="assets/pdf/Staff regulations.pdf">Staff Regulations</a></li>
+                  <li><a href="assets/pdf/rules and regulation.pdf">Rules and Regulations</a></li>
+                  <li><a href="assets/pdf/Appellate Authority.pdf">Appellate Authority</a></li>
+                  <li><a href="assets/pdf/Statement of Board.pdf">Statement of Board</a></li>
+                  <li><a href="assets/pdf/RTI application format.pdf">Download RTI application FOrm</a></li>
+
+
+
+                </ul>
+              </li>
+              <li><a href="assets/pdf/List of Anti Ragging committee.pdf">Anti Ragging</a></li>
+              <li><a href="assets/pdf/women-harassment.pdf">Women Harassment</a></li>
+
+
+
+            </ul>
+          </li>
+          <!-- <li><a href="trainers.html">Statutory Compliances</a></li> -->
+          <li class="dropdown"><a href="#"><span>Student Corner</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+
+
+              <li class="dropdown"><a href="#"><span>Rule Book</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="General-rules.html">General Rules</a></li>
+                  <li><a href="Attendance-Rules.html">Attendance Rules</a></li>
+                  <li><a href="Hostel_rules.html">Hostel Rules</a></li>
+                  <li><a href="Exam-rules.html"></a></li>
+
+
+                </ul>
+              </li>
+
+              <li class="dropdown"><a href="#"><span>Alumni</span> <i
+                    class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="assets/pdf/alumni.pdf">Institute Form</a></li>
+                  <li><a href="https://www.almashines.com/nchmct">NCHM Online</a></li>
+
+                </ul>
+              </li>
+
+              <li><a href="anti-ragging.html">Anti Ragging</a></li>
+              <li><a href="Placement.html">Placements</a></li>
+              <li><a href="registration.html">Online Admission</a></li>
+              <li><a href="Forms_Format.html">Forms & Format</a></li>
+              <li><a href="#">IGNOU Assignment</a></li>
+              <li><a href="Results.html">Results</a></li>
+
+
+
+
+            </ul>
+          </li>
+
+          <li class="dropdown"><a href="#"><span>Online Fee Payment</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="https://paydirect.eduqfix.com/app/uKr2VXr8Bcs79UTUTuFtP+eYK+jE8e12k88R0pgG/3036/6510">2nd
+                  Semester</a></li>
+              <li><a href="https://erp.eshiksa.net/esh/index.php?plugin=Login&action=index">4th & 6th Semester</a></li>
+            </ul>
+          </li>
+          <li><a href="Notice-board.html"><span>Notice</span> </a>
+            <!-- <ul>
+              <li><a href="#">Notice Board</a></li>
+           
+              <li><a href="#">Exam Cell</a></li>
+              <li><a href="#">Results</a></li>
+              <li><a href="#">Tender Notices</a></li>
+              <li><a href="#">Staff Notices</a></li>
+
+            </ul> -->
+
+          </li>
+          <!-- <li><a href="contact.html">Contact</a></li> -->
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="contact.html">Contact Us</a>
+
+    </div>
+  </header>
+
+    
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading"  >Institute's Gallery</h2>
+                <div class="filters btn-group">
+                    <button class="btn btn-custom active" onclick="filterSelection('all')"> Show All</button>
+                    <button class="btn btn-custom" onclick="filterSelection('computer lab')"> Computer Lab</button>
+                    <button class="btn btn-custom" onclick="filterSelection('Front Office')"> Front Office</button>
+                    <button class="btn btn-custom" onclick="filterSelection('Housekeeping')"> Housekeeping</button>
+                    <button class="btn btn-custom" onclick="filterSelection('kitchen')"> Kitchen</button>
+                    <button class="btn btn-custom" onclick="filterSelection('library')"> Library</button>
+                    <button class="btn btn-custom" onclick="filterSelection('Resturant')"> Resturant</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4 gallery-container">
+            <!--Computer Lab start-->
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item computer lab show">
+                <img class="img-fluid" src="institute's image/computer lab/Computer lab (1).jpg" alt="Computer Lab">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item computer lab show">
+                <img class="img-fluid" src="institute's image/computer lab/Computer lab (2).jpg" alt="Computer Lab">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item computer lab show">
+                <img class="img-fluid" src="institute's image/computer lab/Computer lab.jpg" alt="Computer Lab">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item computer lab show">
+                <img class="img-fluid" src="institute's image/computer lab/Computer lab (3).jpg" alt="Computer Lab">
+            </div>
+            <!--Computer Lab end-->
+
+
+       
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Housekeeping show">
+                <img class="img-fluid" src="institute's image/Housekeeping/DSC_0161.JPG" alt="Housekeeping">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Housekeeping show">
+                <img class="img-fluid" src="institute's image/Housekeeping/DSC_0163.JPG" alt="Housekeeping">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Housekeeping show">
+                <img class="img-fluid" src="institute's image/Housekeeping/DSC_0166.JPG" alt="Housekeeping">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Housekeeping show">
+                <img class="img-fluid" src="institute's image/Housekeeping/DSC_0167.JPG" alt="Housekeeping">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Housekeeping show">
+                <img class="img-fluid" src="institute's image/Housekeeping/DSC_0168.JPG" alt="Housekeeping">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Housekeeping show">
+                <img class="img-fluid" src="institute's image/Housekeeping/DSC_0175.JPG" alt="Housekeeping">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Housekeeping show">
+                <img class="img-fluid" src="institute's image/Housekeeping/DSC_0177.JPG" alt="Housekeeping">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Housekeeping show">
+                <img class="img-fluid" src="institute's image/Housekeeping/DSC_0167.JPG" alt="Housekeeping">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Housekeeping show">
+                <img class="img-fluid" src="institute's image/Housekeeping/DSC_0175.JPG" alt="Housekeeping">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Housekeeping show">
+                <img class="img-fluid" src="institute's image/Housekeeping/DSC_0472.JPG" alt="Housekeeping">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Housekeeping show">
+                <img class="img-fluid" src="institute's image/Housekeeping/DSC_0169.JPG" alt="Housekeeping">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Housekeeping show">
+                <img class="img-fluid" src="institute's image/Housekeeping/HK (2).jpeg" alt="Housekeeping">
+            </div>
+
+            <!--Kitchen Start-->
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/BTK (2).jpg" alt="Kitchen">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/Bakery (3).jpg" alt="Kitchen">
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/BTK.jpg" alt="Kitchen">
+            </div>
+
+
+
+
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/DSC_0028.JPG" alt="Kitchen">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/DSC_0048.JPG" alt="Kitchen">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/DSC_0126.JPG" alt="Kitchen">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/DSC_0127.JPG" alt="Kitchen">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/DSC_0429.JPG" alt="Kitchen">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/Food Production.jpeg" alt="Kitchen">
+            </div>
+           
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/ATK.jpg" alt="Kitchen">
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/QTK.jpg" alt="Kitchen">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/qtk (2).jpg" alt="Kitchen">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/Kitchen (9).JPG" alt="Kitchen">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/Kitchen (8).JPG" alt="Kitchen">
+            </div>
+
+
+           
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item kitchen show">
+                <img class="img-fluid" src="institute's image/kitchen/Bakery.jpeg" alt="Kitchen">
+            </div>
+            <!--Kitchen end-->
+
+            <!--Library start-->
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item library show">
+                <img class="img-fluid" src="institute's image/library/IMG_20250204_152427.jpg" alt="Library">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item library show">
+                <img class="img-fluid" src="institute's image/library/IMG_20250204_152523.jpg" alt="Library">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item library show">
+                <img class="img-fluid" src="institute's image/library/IMG_20250204_152546.jpg" alt="Library">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item library show">
+                <img class="img-fluid" src="institute's image/library/IMG_20250204_152628.jpg" alt="Library">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item library show">
+                <img class="img-fluid" src="institute's image/library/IMG_20250204_152721.jpg" alt="Library">
+            </div>
+            <!--Library end-->
+
+
+
+            <!--Front Office start-->
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/DSC_0325.JPG" alt="Front Office">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/DSC_0340.JPG" alt="Front Office">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/DSC_0342.JPG" alt="Front Office">
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/DSC_0344.JPG" alt="Front Office">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/DSC_0345.JPG" alt="Front Office">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/DSC_0352.JPG" alt="Front Office">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/DSC_0361.JPG" alt="Front Office">
+            </div>  <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/DSC_0365.JPG" alt="Front Office">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/Frontm office.jpeg" alt="Front Office">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/Fropnt Office.jpeg" alt="Front Office">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/IDS lab (1).jpeg" alt="Front Office">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/IDS lab (2).jpeg" alt="Front Office">
+            </div>
+        
+          
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/F'O2.png" alt="Front Office">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/FO1.png" alt="Front Office">
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Front Office show">
+                <img class="img-fluid" src="institute's image/Front Office/FO3 (1).png" alt="Front Office">
+            </div>
+          
+            <!--Restaurant start-->
+
+
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Resturant show">
+                <img class="img-fluid" src="institute's image/Restuarnt/DSC_0236.JPG" alt="Resturant">
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Resturant show">
+                <img class="img-fluid" src="institute's image/Restuarnt/DSC_0371.JPG" alt="Resturant">
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Resturant show">
+                <img class="img-fluid" src="institute's image/Restuarnt/DSC_0373.JPG" alt="Resturant">
+            </div>
+
+        
+
+
+
+     
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Resturant show">
+                <img class="img-fluid" src="institute's image/Restuarnt/Restaurant (2).JPG" alt="Resturant">
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Resturant show">
+                <img class="img-fluid" src="institute's image/Restuarnt/restaurant.JPG" alt="Resturant">
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Resturant show">
+                <img class="img-fluid" src="institute's image/Restuarnt/Training Restaurant.jpg" alt="Resturant">
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Resturant show">
+                <img class="img-fluid" src="institute's image/Restuarnt/Restuarant.jpg" alt="Resturant">
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Resturant show">
+                <img class="img-fluid" src="institute's image/Restuarnt/DSC_0384.JPG" alt="Resturant">
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Resturant show">
+                <img class="img-fluid" src="institute's image/Restuarnt/DSC_0404.JPG" alt="Resturant">
+            </div>
+            
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Resturant show">
+                <img class="img-fluid" src="institute's image/Restuarnt/DSC_0413.JPG" alt="Resturant">
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Resturant show">
+                <img class="img-fluid" src="institute's image/Restuarnt/DSC_0414.JPG" alt="Resturant">
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 gallery-item Resturant show">
+                <img class="img-fluid" src="institute's image/Restuarnt/CCFBS F IMAGE.jpeg" alt="Resturant">
+            </div>
+            <!-- Add more gallery items as needed -->
+        </div>
+    </div>
+
+    <script>
+        filterSelection('all');
+        function filterSelection(category) {
+            var items = document.getElementsByClassName('gallery-item');
+            if (category == 'all') category = '';
+            for (var i = 0; i < items.length; i++) {
+                items[i].classList.add('hide');
+                if (items[i].className.indexOf(category) > -1) items[i].classList.remove('hide');
+            }
+        }
+        document.querySelector('.filters').addEventListener('click', function (e) {
+            if (e.target.tagName === 'BUTTON') {
+                document.querySelectorAll('.filters .btn-custom').forEach(function (btn) {
+                    btn.classList.remove('active');
+                });
+                e.target.classList.add('active');
+            }
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
